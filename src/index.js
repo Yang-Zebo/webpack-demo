@@ -8,7 +8,11 @@ let obj = {
       d: 4
     }
   },
-  g: [1, 2, 3]
+  e: [1, 2, { f: 3 }]
 }
 observe(obj)
-console.log('obj', obj.b.c)
+obj.a = 10
+obj.b.c.d = 10
+obj.e[2].f = 5
+obj.e.splice(1,1,4)
+console.log('obj', obj)

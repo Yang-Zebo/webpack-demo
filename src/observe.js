@@ -2,7 +2,7 @@ import Observer from './Observer.js'
 // 尝试创建 Observer 实例，避免重复侦测value变化的问题
 export default function observe(value) {
   // 如果value不是对象，就什么都不做
-  if (typeof value != 'object') {
+  if (typeof value !== 'object') {
     return
   }
   let ob

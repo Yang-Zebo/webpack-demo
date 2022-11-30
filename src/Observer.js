@@ -1,6 +1,8 @@
-import { def } from './utils.js'
+import {def} from './utils.js'
 import defineReactive from './defineReactive.js'
 import array from './array'
+
+
 export default class Observer {
   constructor(value) {
     // 类里的 this 指向的是其创建的实例
@@ -12,7 +14,7 @@ export default class Observer {
   // 遍历value的每一个key
   walk(value) {
     for (let key in value) {
-      defineReactive(value, key);
+      defineReactive(value, key)
     }
   }
 }

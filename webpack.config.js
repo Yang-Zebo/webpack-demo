@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     port: 3001, // 服务端口
     static: {
-        directory: path.join(__dirname, '/')
+      directory: path.join(__dirname, '/')
     },
     compress: true,
     open: true // 是否自动打开浏览器

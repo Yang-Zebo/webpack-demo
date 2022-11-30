@@ -2,7 +2,9 @@ import Observer from './Observer.js'
 // 尝试创建 Observer 实例，避免重复侦测value变化的问题
 export default function observe(value) {
   // 如果value不是对象，就什么都不做
-  if (typeof value != 'object') return
+  if (typeof value != 'object') {
+    return
+  }
   let ob
   // 看看 __ob__ 是否存在 Observer 实例, 可以判断这个值是不是响应式。
   // 第一次进来 __ob__ 一定是 undefined

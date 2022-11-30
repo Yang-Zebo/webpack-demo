@@ -1,5 +1,6 @@
 import observe from './observe.js'
 
+
 let obj = {
   a: 1,
   b: {
@@ -10,4 +11,4 @@ let obj = {
   g: [1, 2, 3]
 }
 observe(obj)
-console.log('obj', obj.b.c);
+console.log('obj', obj.b.c)

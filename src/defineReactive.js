@@ -14,6 +14,12 @@ export default function defineReactive(data, key, value) {
     configurable: true,
     get() {
       console.log(`getter访问${ key }属性`)
+      if(window.target) {
+        dep.depend()
+        if(childOb) {
+          childOb.dep.depend()
+        }
+      }
       return value
     },
     set(newVal) {

@@ -1,5 +1,5 @@
 import observe from './observe.js'
-
+import Watcher from './Watcher'
 
 let obj = {
   a: 1,
@@ -11,8 +11,9 @@ let obj = {
   e: [1, 2, { f: 3 }]
 }
 observe(obj)
-obj.a = 10
+new Watcher(obj, 'b.c.d', (newVal, oldVal) => {
+  console.log('新值为', newVal)
+  console.log('旧值', oldVal)
+})
 obj.b.c.d = 10
-obj.e[2].f = 5
-obj.e.splice(1,1,4)
 console.log('obj', obj)
